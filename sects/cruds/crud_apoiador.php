@@ -85,6 +85,7 @@ function delete_apoiador($id_apoiador){
     
     
 
+
     $sql = "DELETE FROM leem_foto WHERE id = ?";
     $comando = $conexao->prepare($sql);
     $comando->bind_param('i', $id_apoiador);
