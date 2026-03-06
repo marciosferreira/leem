@@ -15,7 +15,7 @@ if (!empty($_REQUEST['slug'])) :
             update_visitas($equipe_usuario['id']);
         }
 
-        $head = '<meta property="og:image" content="https://leem.net.br/public/uploads/fotos/' . $usuario_avatar . '">
+        $head = '<meta property="og:image" content="https://leem.net.br/uploads/fotos/' . $usuario_avatar . '">
         <meta property="og:image:type" content="image/jpeg">
         <meta property="og:image:width" content="800">
         <meta property="og:image:height" content="600">
@@ -39,8 +39,8 @@ if (!empty($_REQUEST['slug'])) :
             <div class="row align-items-top text-center">
                 <div class="col-12 col-md-6 col-xl-5 h-100 mb-3">
                     <div class="p-3 perfil-left-imagem mb-3 text-center">
-                        <figure class="avatar p-2 bg-white m-auto" style="background-image: url(/public/uploads/fotos/<?php echo $usuario_avatar; ?>);background-size: 100%;background-position: center;">
-                            <img src="/public/uploads/fotos/<?php echo $usuario_avatar; ?>" class="img-fluid avatar p-2 d-none">
+                        <figure class="avatar p-2 bg-white m-auto" style="background-image: url(/uploads/fotos/<?php echo $usuario_avatar; ?>);background-size: 100%;background-position: center;">
+                            <img src="/uploads/fotos/<?php echo $usuario_avatar; ?>" class="img-fluid avatar p-2 d-none">
                         </figure>
 
                         <?php
@@ -54,7 +54,7 @@ if (!empty($_REQUEST['slug'])) :
                                 ?>
 
                         <h1 class="h3 font-weight-normal mt-5">
-                            <img src="/public/img/cracha-usuario.svg" width="45" class="align-middle mr-2">
+                            <img src="/img/cracha-usuario.svg" width="45" class="align-middle mr-2">
                             <?php echo $equipe_usuario['nome']; ?>
                         </h1>
 
@@ -62,14 +62,14 @@ if (!empty($_REQUEST['slug'])) :
                                 if ($equipe_usuario['perfil'] == 'admin') :
                                     ?>
 
-                        <img src="/public/img/admin-usuario.svg" width="30" class="align-middle">
+                        <img src="/img/admin-usuario.svg" width="30" class="align-middle">
 
                         <?php
                                 endif;
                                 if ($equipe_usuario['perfil'] == 'pesquisador') :
                                     ?>
 
-                        <img src="/public/img/pesquisador-usuario.svg" width="30" class="align-middle">
+                        <img src="/img/pesquisador-usuario.svg" width="30" class="align-middle">
 
                         <?php
                                 endif;
@@ -88,7 +88,7 @@ if (!empty($_REQUEST['slug'])) :
                         <section>
 
                             <h1 class="h4">
-                                <img src="/public/img/apresentacao-usuario.svg" width="45" class="align-middle mr-2"> Apresentação
+                                <img src="/img/apresentacao-usuario.svg" width="45" class="align-middle mr-2"> Apresentação
                             </h1>
                             <div class="border-lg border-dark p-3 rounded-lg">
                                 <?php
@@ -117,7 +117,7 @@ if (!empty($_REQUEST['slug'])) :
                         <section class="mt-5">
 
                             <h1 class="h4">
-                                <img src="/public/img/social-usuario.svg" width="45" class="align-middle mr-2"> Redes Sociais
+                                <img src="/img/social-usuario.svg" width="45" class="align-middle mr-2"> Redes Sociais
                             </h1>
                             <div class="">
                                 <a href="<?php echo $equipe_usuario['instagram']; ?>" class="icon-social p-2 m-2 h5 d-inline-block text-center text-white bg-dark" target="_blank">
@@ -144,7 +144,7 @@ if (!empty($_REQUEST['slug'])) :
                         <section>
 
                             <h1 class="h2">
-                                <img src="/public/img/pesquisas-icon.svg" width="45" class="align-middle mr-2"> Pesquisas
+                                <img src="/img/pesquisas-icon.svg" width="45" class="align-middle mr-2"> Pesquisas
                             </h1>
 
                             <div class="bg-white border p-1 rounded-lg">
@@ -173,7 +173,7 @@ if (!empty($_REQUEST['slug'])) :
                         <section class="mt-5">
 
                             <h1 class="h2">
-                                <img src="/public/img/news-icon.svg" width="45" class="align-middle mr-2"> Matérias
+                                <img src="/img/news-icon.svg" width="45" class="align-middle mr-2"> Matérias
                             </h1>
 
                             <div class="bg-white border p-1 rounded-lg">
@@ -195,7 +195,7 @@ if (!empty($_REQUEST['slug'])) :
                         <section class="mt-5">
 
                             <h1 class="h2">
-                                <img src="/public/img/projetos-icon.svg" width="45" class="align-middle mr-2"> Projetos
+                                <img src="/img/projetos-icon.svg" width="45" class="align-middle mr-2"> Projetos
                             </h1>
 
                             <div class="bg-white border p-1 rounded-lg">
@@ -209,7 +209,7 @@ if (!empty($_REQUEST['slug'])) :
                                                     foreach ($projetos as $projeto) {
                                                         ?>
                                         <a href="/projetos/<?php echo $projeto['slug']; ?>/" class="bg-white mb-3">
-                                            <img src="/public/uploads/fotos/<?php echo $projeto['foto']; ?>" width="120" height="80" alt="<?php echo $projeto['titulo']; ?>">
+                                            <img src="/uploads/fotos/<?php echo $projeto['foto']; ?>" width="120" height="80" alt="<?php echo $projeto['titulo']; ?>">
                                         </a>
 
                                         <?php

@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'configs.php';
 header('Content-Type: text/html; charset=utf-8');
 include_once('include/inc_header.php');
 include_once("include/templates/inc_materia_min.php");
@@ -19,18 +20,18 @@ include_once("include/templates/inc_materia_min.php");
             foreach ($materias as $destaque) :
                 ?>
 
-                <div class="h-100 pt-5 pb-5 destaque" style=" background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0)), url(/public/uploads/fotos/<?php echo $destaque['foto']; ?>) center no-repeat;">
+                <div class="h-100 pt-5 pb-5 destaque" style=" background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0)), url(/uploads/fotos/<?php echo $destaque['foto']; ?>) center no-repeat;">
                     <div class="container pt-5 pb-5">
                         <div class="row align-items-center">
                             <div class="col-12 col-md-6 text-center">
                                 <h1 class="pl-3 lead font-weight-bold m-0">
-                                    <img src="/public/img/LOGO.svg" class="img-fluid pl-4 pr-4" class="m-auto" alt="LEEM">
+                                    <img src="/img/LOGO.svg" class="img-fluid pl-4 pr-4" class="m-auto" alt="LEEM">
                                     <span class="d-none">LEEM</span>
                                 </h1>
                             </div>
                             <div class="text-destaque col-12 col-md-6">
                                 <h1 class="text-white">
-                                    <a href="/materia/<?php echo $destaque['slug']; ?>" class="text-white">
+                                    <a href="/index.php/materia/<?php echo $destaque['slug']; ?>" class="text-white">
 
                                         <?php
                                         $arrayWords = explode(' ', $destaque['titulo']);

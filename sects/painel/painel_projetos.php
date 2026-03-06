@@ -45,7 +45,7 @@ if (!empty($_REQUEST['acao']) && $_REQUEST['acao'] == 'edita-projeto' && !empty(
             <div class="row m-0 align-items-center text-center">
                 <div class="col-12 col-md-6 p-0">
                     <div class="bg-white p-3">
-                        <img src="/public/uploads/fotos/<?php echo $projeto['foto']; ?>" class="img-fluid">
+                        <img src="/uploads/fotos/<?php echo $projeto['foto']; ?>" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-12 col-md-6 p-0">
@@ -126,7 +126,7 @@ elseif (!empty($_REQUEST['acao']) && $_REQUEST['acao'] == 'apaga-projeto' && !em
                 <div class="row m-0 align-items-center text-center">
                     <div class="col-12 col-md-6 p-0">
                         <div class="bg-white p-3">
-                            <img src="/public/uploads/<?php echo $projeto['foto']; ?>" class="img-fluid">
+                            <img src="/uploads/fotos/<?php echo $projeto['foto']; ?>" class="img-fluid">
                         </div>
                     </div>
                     <div class="col-12 col-md-6 p-0">
@@ -238,7 +238,7 @@ else :
             <div class="row m-0 align-items-center">
                 <div class="col-12 text-center p-0">
                     <div class="bg-white">
-                        <img src="/public/uploads/fotos/<?php echo $projeto['foto']; ?>" class="img-fluid mr-3">
+                        <img src="/uploads/fotos/<?php echo $projeto['foto']; ?>" class="img-fluid mr-3">
                         <h3 class="lead mt-2">
                             <a href="/projetos/<?php echo $projeto['slug']; ?>/" target="_blank" class="text-dark">
                                 <?php echo $projeto['titulo']; ?>
@@ -290,7 +290,7 @@ else :
             <div class="row m-0 align-items-center">
                 <div class="col-12 text-center p-0">
                     <div class="bg-white">
-                        <img src="/public/uploads/fotos/<?php echo $projeto['foto']; ?>" class="img-fluid mr-3">
+                        <img src="/uploads/fotos/<?php echo $projeto['foto']; ?>" class="img-fluid mr-3">
                         <h3 class="lead mt-2">
                             <a href="/projetos/<?php echo $projeto['slug']; ?>/" target="_blank" class="text-dark">
                                 <?php echo $projeto['titulo']; ?>

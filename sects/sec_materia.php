@@ -7,9 +7,9 @@ if (isset($_REQUEST['slug'])): $slug = $_REQUEST['slug'];
 
     if ($materias->num_rows > 0): $materia = $materias->fetch_assoc();
         if (!empty($materia['foto'])) {
-            $foto_materia =  '/public/uploads/fotos/' . $materia['foto'];
+            $foto_materia =  '/uploads/fotos/' . $materia['foto'];
         } else {
-            $foto_materia = '/public/img/logo-leem.png';
+            $foto_materia = '/img/logo-leem.png';
         }
 
         $head = '<meta property="og:image" content="' . $foto_materia . '">

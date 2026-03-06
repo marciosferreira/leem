@@ -18,7 +18,7 @@ if(sessao_ativa()){
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Laboratório de Ecofisiologia e Evolução Molecular – Instituto Nacional de Pesquisas da Amazônia.">
         <meta name="author" content="Danilson Veloso de Sousa">
-        <link rel="icon" href="/public/img/favicon.ico">
+        <link rel="icon" href="/img/favicon.ico">
         <title>LEEM | INPA - Laboratório de Ecofisiologia e Evolução Molecular – Instituto Nacional de Pesquisas da Amazônia.</title>
 
         <?php
@@ -113,4 +113,3 @@ if(sessao_ativa()){
                         </ul>
                     </nav>
                 </div>
-

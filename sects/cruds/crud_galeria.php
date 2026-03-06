@@ -77,7 +77,7 @@ function delete_imagem($id_imagem)
     $imagem = $imagem->fetch_assoc();
     $imagem = $imagem['nome'];
 
-    $imagemPath = dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . 'fotos' . DIRECTORY_SEPARATOR . $imagem;
+    $imagemPath = dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . 'fotos' . DIRECTORY_SEPARATOR . $imagem;
     if (file_exists($imagemPath)) {
         @unlink($imagemPath);
     }

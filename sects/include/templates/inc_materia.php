@@ -9,7 +9,7 @@ foreach ($materias as $materia) :
     <article class="h-100 bg-white">
         <div class="row m-0 align-items-center border-bottom">
             <div class="col-3 col-lg-2 p-1 pb-3 text-center">
-                <img src="/public/uploads/fotos/<?php echo $avatar; ?>" alt="<?php echo $usuario['nome']; ?>" class="m-auto" width="60">
+                <img src="/uploads/fotos/<?php echo $avatar; ?>" alt="<?php echo $usuario['nome']; ?>" class="m-auto" width="60">
             </div>
             <div class="col-9 col-lg-10 p-1 pb-3">
                 <p class="small d-inline-block m-0"><strong><?php echo $usuario['nome']; ?></strong>
@@ -46,8 +46,8 @@ foreach ($materias as $materia) :
                         <?php if ($materia['foto'] != NULL) : ?>
 
                         <figure>
-                            <a href="/materia/<?php echo $materia['slug']; ?>/">
-                                <img src="/public/uploads/fotos/<?php echo $materia['foto']; ?>" class="img-fluid" alt="<?php echo $materia['titulo']; ?>">
+                            <a href="/index.php/materia/<?php echo $materia['slug']; ?>/">
+                                <img src="/uploads/fotos/<?php echo $materia['foto']; ?>" class="img-fluid" alt="<?php echo $materia['titulo']; ?>">
                             </a>
                         </figure>
 

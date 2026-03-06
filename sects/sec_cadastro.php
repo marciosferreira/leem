@@ -30,7 +30,7 @@
                 <div class="col-12 col-sm-6 m-auto p-3">
                     <h1 class="w-100 pl-3 lead font-weight-bold text-center m-0 p-0 d-inline-block">
                         <a class="navbar-brand" href="/">
-                            <img src="/public/img/logo-leem.png" width="180" alt="LEEM">
+                            <img src="/img/logo-leem.png" width="180" alt="LEEM">
                         </a>
                         <span class="d-none">LEEM</span>
                     </h1>

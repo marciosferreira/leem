@@ -63,7 +63,7 @@ else:
     <div class="col-12 col-md-6 col-xl-4 p-3">
         <div class="bg-white h-100 shadow-md">
             <div class="bg-white">
-                <img src="/public/uploads/fotos/<?php echo $destaque['foto'];?>" class="w-100 h-100">
+                <img src="/uploads/fotos/<?php echo $destaque['foto'];?>" class="w-100 h-100">
             </div>
             <a href="/admin/destaques/apaga-destaque/<?php echo $destaque['id'];?>/" class="btn btn-block btn-sm text-white bg-danger"><i class="material-icons align-middle"> delete </i> Apagar</a>
         </div>

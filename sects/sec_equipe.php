@@ -34,9 +34,9 @@ include_once('include/inc_header.php');
 
                 <div class="pl-3 pr-3 text-center pb-3">
                     <div class="p-3 bg-white h-100">
-                        <img src="/public/uploads/fotos/<?php echo $avatar; ?>" width="120" class="m-auto mb-3" alt="<?php echo $visitante['nome']; ?>">
+                        <img src="/uploads/fotos/<?php echo $avatar; ?>" width="120" class="m-auto mb-3" alt="<?php echo $visitante['nome']; ?>">
                         <h3 class="h5 pb-3">
-                            <a href="/equipe/<?php echo $visitante['slug']; ?>/" class="btn btn-sm bg-white text-dark"><?php echo $visitante['nome']; ?></a>
+                            <a href="/index.php/equipe/<?php echo $visitante['slug']; ?>/" class="btn btn-sm bg-white text-dark"><?php echo $visitante['nome']; ?></a>
                         </h3>
                     </div>
                 </div>

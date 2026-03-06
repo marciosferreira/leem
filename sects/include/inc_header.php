@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Laboratório de Ecofisiologia e Evolução Molecular.">
     <meta name="author" content="Danilson Veloso de Sousa">
-    <link rel="icon" href="/public/img/favicon.ico">
+    <link rel="icon" href="/img/favicon.ico">
 
     <?php if (!isset($head)) : ?>
-    <meta property="og:image" content="/public/img/logo-leem.png">
+    <meta property="og:image" content="/img/logo-leem.png">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="600">

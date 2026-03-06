@@ -76,7 +76,7 @@ function delete_destaque($id_destaque){
     $destaque = $destaque->fetch_assoc();
     $foto = $destaque['foto'];
 
-    $fotoPath = dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . 'fotos' . DIRECTORY_SEPARATOR . $foto;
+    $fotoPath = dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . 'fotos' . DIRECTORY_SEPARATOR . $foto;
     if (file_exists($fotoPath)) {
         @unlink($fotoPath);
     }

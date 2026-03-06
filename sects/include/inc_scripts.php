@@ -1,14 +1,14 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.27.3/trumbowyg.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.27.3/langs/pt_br.min.js"></script>
+<script src="/libs/js/jquery.min.js"></script>
+<script src="/libs/js/mask.min.js"></script>
+<script src="/libs/js/popper.min.js"></script>
+<script src="/libs/js/bootstrap.min.js"></script>
+<script src="/js/slick.min.js"></script>
+<script src="/libs/editor/trumbowyg.min.js"></script>
+<script src="/libs/editor/langs/pt_br.min.js"></script>
 <!-- Editor de imagem -->
-<!-- <script src="/public/libs/darkroomjs/fabric.js"></script>
-<script src="/public/libs/darkroomjs/darkroom.js"></script> -->
-<script src="/public/js/app.js?v=<?php echo date('Ymdhis');?>"></script>
+<!-- <script src="/libs/darkroomjs/fabric.js"></script>
+<script src="/libs/darkroomjs/darkroom.js"></script> -->
+<script src="/js/app.js?v=<?php echo date('Ymdhis');?>"></script>
 <script>
     $(window).scroll(function(event) {
         var scroll = $(window).scrollTop();

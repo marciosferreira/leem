@@ -23,7 +23,7 @@ body {
     top: 0;
     left: 0;
     background: #9ccdcb;
-    background-image: url(https://leem.net.br/public/img/ajax-loader.gif);
+    background-image: url(../img/ajax-loader.gif) 60px 60px;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 99999;
@@ -287,6 +287,9 @@ textarea,
     }
 }
 
+
+/*Cronograma*/
+
 .circle {
     padding: 13px 20px;
     border-radius: 50%;
@@ -449,6 +452,9 @@ textarea,
 }
 
 @media screen and (min-width: 1024px) {
+    /* .perfil-left-imagem {
+        width: 350px !important;
+    } */
     .perfil-left-imagem figure {
         width: 200px !important;
         height: 200px !important;
@@ -472,18 +478,30 @@ textarea,
     color: #ffffff;
 }
 
+
+/* width */
+
 ::-webkit-scrollbar {
     height: 8px;
     width: 8px;
 }
 
+
+/* Track */
+
 ::-webkit-scrollbar-track {
     background: #dadada;
 }
 
+
+/* Handle */
+
 ::-webkit-scrollbar-thumb {
     background: #343a40;
 }
+
+
+/* Handle on hover */
 
 ::-webkit-scrollbar-thumb:hover {
     background: #202124;

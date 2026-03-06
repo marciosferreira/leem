@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'configs.php';
 
-$head = '<meta property="og:image" content="/public/img/logo-leem.png">
+$head = '<meta property="og:image" content="/img/logo-leem.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="600">
@@ -25,7 +25,7 @@ if (isset($_REQUEST['slug']) && !isset($_REQUEST['acao'])) :
     if ($pesquisas->num_rows > 0) :
         $pesquisa = $pesquisas->fetch_assoc();
 
-        $head = '<meta property="og:image" content="/public/img/logo-leem.png">
+        $head = '<meta property="og:image" content="/img/logo-leem.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="600">
@@ -53,7 +53,7 @@ if (isset($_REQUEST['slug']) && !isset($_REQUEST['acao'])) :
                     <article class="h-100 bg-white">
                         <div class="row m-0 align-items-center border-bottom">
                             <div class="col-3 col-lg-2 p-1 text-center pb-3">
-                                <img src="/public/uploads/fotos/<?php echo $avatar; ?>" alt="<?php echo $usuario['nome']; ?>" class="m-auto" width="60">
+                                <img src="/uploads/fotos/<?php echo $avatar; ?>" alt="<?php echo $usuario['nome']; ?>" class="m-auto" width="60">
                             </div>
                             <div class="col-9 col-lg-10 p-1 pb-3">
                                 <p class="small d-inline-block m-0"><strong>

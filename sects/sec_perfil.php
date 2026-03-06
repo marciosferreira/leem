@@ -23,7 +23,7 @@ include_once('include/inc_header.php');
                                     <button class="btn btn-sm bg-blue text-white position-absolute" type="button" id="btnVatar">
                                         <i class="material-icons align-middle"> photo </i>Alterar
                                     </button>
-                                    <img src="/public/uploads/fotos/<?php echo $avatar; ?>" id="fotoPerfil" width="180" class="mb-3 border avatar rounded p-2 bg-white">
+                                    <img src="/uploads/fotos/<?php echo $avatar; ?>" id="fotoPerfil" width="180" class="mb-3 border avatar rounded p-2 bg-white">
                                 </div>
                             </div>
                             <div class="col-12 text-center">

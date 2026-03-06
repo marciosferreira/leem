@@ -15,7 +15,7 @@ if (!empty($_REQUEST['acao']) && $_REQUEST['acao'] == 'edita-usuario' && !empty(
                 <div class="row m-0">
                     <div class="col-12 p-0">
                         <div class="bg-white p-3">
-                            <img src="/public/uploads/fotos/<?php echo $avatar; ?>" width="80px" height="80px" class="rounded-circle mr-3">
+                            <img src="/uploads/fotos/<?php echo $avatar; ?>" width="80px" height="80px" class="rounded-circle mr-3">
                             <h3 class="h5 d-inline-block">
                                 <?php echo $usuario['nome']; ?>
                             </h3>
@@ -86,7 +86,7 @@ elseif (!empty($_REQUEST['acao']) && $_REQUEST['acao'] == 'apaga-usuario' && !em
                 <div class="row m-0">
                     <div class="col-12 p-0">
                         <div class="bg-white p-3">
-                            <img src="/public/uploads/fotos/<?php echo $avatar; ?>" width="80px" height="80px" class="rounded-circle mr-3">
+                            <img src="/uploads/fotos/<?php echo $avatar; ?>" width="80px" height="80px" class="rounded-circle mr-3">
                             <h3 class="h5 d-inline-block">
                                 <?php echo $usuario['nome']; ?>
                             </h3>
@@ -193,7 +193,7 @@ else :
                                     <div class="bg-white p-1">
                                         <div class="row w-100">
                                             <div class="col-2 text-center">
-                                                <img src="/public/uploads/fotos/<?php echo $avatar; ?>" width="40" height="40" class="rounded-circle mr-3">
+                                                <img src="/uploads/fotos/<?php echo $avatar; ?>" width="40" height="40" class="rounded-circle mr-3">
                                             </div>
                                             <div class="col-8">
                                                 <h3 class="lead"><a href="/equipe/<?php echo $usuario['slug']; ?>/" target="_blank" class="text-dark">
@@ -258,7 +258,7 @@ else :
                                 <div class="bg-white p-1">
                                     <div class="row w-100">
                                         <div class="col-2 text-center">
-                                            <img src="/public/uploads/fotos/<?php echo $avatar; ?>" width="40" height="40" class="rounded-circle mr-3">
+                                            <img src="/uploads/fotos/<?php echo $avatar; ?>" width="40" height="40" class="rounded-circle mr-3">
                                         </div>
                                         <div class="col-8">
                                             <h3 class="lead"><a href="/equipe/<?php echo $usuario['slug']; ?>/" target="_blank" class="text-dark">

@@ -6,7 +6,7 @@ $avatar = read_avatar($id_usuario);
 
 <li class="nav-item p-0 botao-menu">
     <a class="nav-link" href="javascript:void(0)">
-        <img src="/public/uploads/fotos/<?php echo $avatar;?>" width="40" height="40" class="rounded-circle align-middle avatar">
+        <img src="/uploads/fotos/<?php echo $avatar;?>" width="40" height="40" class="rounded-circle align-middle avatar">
 
         <?php
         $usuario = $usuario->fetch_assoc();

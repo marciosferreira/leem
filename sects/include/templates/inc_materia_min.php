@@ -31,10 +31,10 @@ function materia($materias){
                 <div class="row m-0 align-items-top">
                     <div class="col-12 p-0">
                         <?php
-                        $foto = (isset($materia['foto'])) ? '/public/uploads/fotos/' . $materia['foto'] : '/public/img/LOGO.svg'; ?>
+                        $foto = (isset($materia['foto'])) ? '/uploads/fotos/' . $materia['foto'] : '/img/LOGO.svg'; ?>
 
                         <figure class="materia-imagem rounded" style="background: #313131 url(<?php echo $foto; ?>) center center;background-size: cover">
-                            <a href="/materia/<?php echo $materia['slug']; ?>/">
+                            <a href="/index.php/materia/<?php echo $materia['slug']; ?>/">
                                 <img src="<?php echo $foto; ?>" class="img-fluid bg-green rounded d-none" alt="<?php echo $materia['titulo']; ?>">
                             </a>
                         </figure>
@@ -43,7 +43,7 @@ function materia($materias){
                     <div class="col-12 p-0">
                         <header>
                             <h1 class="h5 font-weight-bold mt-2" style="height: 90px">
-                                <a href="/materia/<?php echo $materia['slug']; ?>/" class="text-dark"><?php echo $texto_materia; ?>...</a>
+                                <a href="/index.php/materia/<?php echo $materia['slug']; ?>/" class="text-dark"><?php echo $texto_materia; ?>...</a>
                             </h1>
                         </header>
                         <main>

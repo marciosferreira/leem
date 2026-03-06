@@ -39,7 +39,7 @@ $projeto = $projeto->fetch_assoc();
             <div class="container">
                 <div class="row align-items-center mb-3">
                     <div class="col-12 col-lg-4 text-center">
-                        <img src="/public/uploads/fotos/<?php echo $projeto['foto'];?>" class="img-fluid" alt="<?php echo $projeto['titulo'];?>">
+                        <img src="/uploads/fotos/<?php echo $projeto['foto'];?>" class="img-fluid" alt="<?php echo $projeto['titulo'];?>">
                     </div>
                     <header class="col-12 col-lg-8">
                         <h1 class="font-weight-bold text-uppercase mb-4 text-dark">
@@ -240,7 +240,7 @@ $projeto = $projeto->fetch_assoc();
                             <article class="h-100 bg-white border">
                                 <div class="row m-0 align-items-center border-bottom">
                                     <div class="col-4 col-lg-2 p-1 text-center">
-                                        <img src="/public/uploads/fotos/<?php echo $avatar;?>" alt="<?php echo $usuario['nome'];?>" class="m-auto" width="60">
+                                        <img src="/uploads/fotos/<?php echo $avatar;?>" alt="<?php echo $usuario['nome'];?>" class="m-auto" width="60">
                                     </div>
                                     <div class="col-8 col-md-8 p-1">
                                         <p class="small d-inline-block m-0"><strong>
@@ -264,7 +264,7 @@ $projeto = $projeto->fetch_assoc();
                                     <div class="col-12 p-0">
                                         <header>
                                             <h1 class="h3 p-3 font-weight-bold">
-                                                <a href="/materia/<?php echo $materia['slug'];?>/" class="text-dark">
+                                                <a href="/index.php/materia/<?php echo $materia['slug'];?>/" class="text-dark">
                                                     <?php echo $materia['titulo'];?></a></h1>
                                         </header>
                                         <main class="p-3">
@@ -275,8 +275,8 @@ $projeto = $projeto->fetch_assoc();
                                             <?php if($materia['foto'] != NULL):?>
 
                                             <figure>
-                                                <a href="/materia/<?php echo $materia['slug'];?>/">
-                                                    <img src="/public/uploads/fotos/<?php echo $materia['foto'];?>" class="img-fluid" alt="<?php echo $materia['titulo'];?>">
+                                                <a href="/index.php/materia/<?php echo $materia['slug'];?>/">
+                                                    <img src="/uploads/fotos/<?php echo $materia['foto'];?>" class="img-fluid" alt="<?php echo $materia['titulo'];?>">
                                                 </a>
                                             </figure>
 
@@ -345,11 +345,11 @@ if($projetos->num_rows > 0):
     <article class="w-100 bg-white h-100 mt-3 mb-3 border-bottom">
         <div class="row align-items-center">
             <div class="col-12 col-lg-4 text-center">
-                <img src="/public/uploads/fotos/<?php echo $projeto['foto'];?>" class="img-fluid" alt="<?php echo $projeto['titulo'];?>">
+                <img src="/uploads/fotos/<?php echo $projeto['foto'];?>" class="img-fluid" alt="<?php echo $projeto['titulo'];?>">
             </div>
             <div class="col-12 col-lg-8 text-uppercase">
                 <h1 class="font-weight-bold mb-4 mt-3">
-                    <a href="/projetos/<?php echo $projeto['slug'];?>/" class="w-100 font-weight-bold bg-white text-dark">
+                    <a href="/index.php/projetos/<?php echo $projeto['slug'];?>/" class="w-100 font-weight-bold bg-white text-dark">
                         <?php echo $projeto['titulo'];?>
                     </a>
                 </h1>

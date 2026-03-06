@@ -50,8 +50,8 @@ else :
                         <a href="/admin/galeria/apagar/<?php echo $imagem['id']; ?>/" class="btn btn-block btn-sm text-white bg-danger mb-3">
                             <i class="material-icons align-middle"> delete </i> Apagar
                         </a>
-                        <img src="/public/uploads/fotos/<?php echo $imagem['nome']; ?>" class="w-100 h-100">
-                        <input type="text" class="form-control" value="https://leem.net.br/public/uploads/fotos/<?php echo $imagem['nome']; ?>">
+                        <img src="/uploads/fotos/<?php echo $imagem['nome']; ?>" class="w-100 h-100">
+                        <input type="text" class="form-control" value="https://leem.net.br/uploads/fotos/<?php echo $imagem['nome']; ?>">
                     </div>
                 </div>
             </div>

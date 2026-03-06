@@ -15,7 +15,7 @@
                 <div class="row m-0 usuario">
                     <div class="col-12 p-0">
                         <div class="bg-white p-3">
-                            <img src="/public/uploads/fotos/<?php echo $avatar;?>" width="60px" height="60px" class="rounded-circle mr-3">
+                            <img src="/uploads/fotos/<?php echo $avatar;?>" width="60px" height="60px" class="rounded-circle mr-3">
                             <h3 class="h5 d-inline-block"><a href="/equipe/<?php echo $usuario['slug'];?>" target="_blank" class="text-dark"><?php echo substr($usuario['nome'], 0,20);?></a>...
                                 <div class="pt-2 small text-capitalize <?php $cor = ($usuario['perfil'] == 'visitante')? 'text-warning': 'text-dark'; echo $cor; ?>">
                                     <i class="material-icons align-middle"> stars </i> <?php echo $usuario['perfil'];?>

@@ -213,7 +213,7 @@ if (isset($_REQUEST['busca'])):
 
                 <div class="h-100 col-12 p-0">
                     <a href="/materia/<?php echo $pesquisa['slug']; ?>/" target="_blank">
-                        <img src="/public/uploads/fotos/<?php echo $pesquisa['foto']; ?>" class="img-fluid">
+                        <img src="/uploads/fotos/<?php echo $pesquisa['foto']; ?>" class="img-fluid">
                     </a>
                 </div>
 

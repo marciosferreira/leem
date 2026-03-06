@@ -12,7 +12,7 @@ if (!empty($_REQUEST['acao']) && $_REQUEST['acao'] == 'edita-materia' && !empty(
                     <div class="row m-0">
                         <div class="col-12 col-sm-6 m-auto p-0">
                             <div class="bg-white p-3">
-                                <img src="/public/uploads/fotos/<?php echo $materia['foto']; ?>" class="img-fluid mb-3">
+                                <img src="/uploads/fotos/<?php echo $materia['foto']; ?>" class="img-fluid mb-3">
                                 <h3 class="h5 d-inline-block">
                                     <?php echo $materia['titulo']; ?>
                                 </h3>
@@ -90,7 +90,7 @@ elseif (!empty($_REQUEST['acao']) && $_REQUEST['acao'] == 'apaga-materia' && !em
     $materia = $materias->fetch_assoc();
     $foto = '<div class="h-100 col-12 p-0">';
     $foto .= '    <a href="/materia/' . $materia['slug'] . '" target="_blank">';
-    $foto .= '        <img src="/public/uploads/fotos/' . $materia['foto'] . '" class="img-fluid">';
+    $foto .= '        <img src="/uploads/fotos/' . $materia['foto'] . '" class="img-fluid">';
     $foto .= '    </a>';
     $foto .= '</div>';
     ?>
@@ -271,7 +271,7 @@ else :
                                         </div>
                                     </div>
                                     <?php
-                                    $foto = (isset($materia['foto'])) ? '/public/uploads/fotos/' . $materia['foto'] : '/public/img/LOGO.svg'; ?>
+                                    $foto = (isset($materia['foto'])) ? '/uploads/fotos/' . $materia['foto'] : '/img/LOGO.svg'; ?>
 
                                     <a href="/materia/<?php echo $materia['slug']; ?>/">
                                         <figure class="materia-imagem rounded border-dark bg-dark" style="height: 200px;background: url(<?php echo $foto; ?>) center center;background-size: cover">
@@ -330,7 +330,7 @@ else :
                                         </div>
                                     </div>
                                     <?php
-                                    $foto = (isset($materia['foto'])) ? '/public/uploads/fotos/' . $materia['foto'] : '/public/img/LOGO.svg'; ?>
+                                    $foto = (isset($materia['foto'])) ? '/uploads/fotos/' . $materia['foto'] : '/img/LOGO.svg'; ?>
 
                                     <a href="/materia/<?php echo $materia['slug']; ?>/">
                                         <figure class="materia-imagem rounded border-dark bg-dark" style="height: 200px;background: url(<?php echo $foto; ?>) center center;background-size: cover">

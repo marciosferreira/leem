@@ -64,7 +64,7 @@ else:
         <div class="bg-white h-100 shadow-md">
             <a href="/admin/apoiadores/apaga-apoiador/<?php echo $apoiador['id']; ?>/" class="btn btn-block btn-sm text-white bg-danger"><i class="material-icons align-middle"> delete </i> Apagar</a>
             <div class="bg-white">
-                <img src="/public/uploads/fotos/<?php echo $apoiador['foto']; ?>" class="img-fluid">
+                <img src="/uploads/fotos/<?php echo $apoiador['foto']; ?>" class="img-fluid">
             </div>
         </div>
     </div>

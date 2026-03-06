@@ -9,7 +9,7 @@ $avatar = read_avatar($usuario['id']);
     <article class="h-100 bg-white shadow-md">
         <div class="row m-0 align-items-center border-bottom bg-blue">
             <div class="col-3 col-lg-2 p-1 text-center">
-                <img src="/public/uploads/fotos/<?php echo $avatar;?>" alt="<?php echo $usuario['nome'];?>" 
+                <img src="/uploads/fotos/<?php echo $avatar;?>" alt="<?php echo $usuario['nome'];?>" 
                      class="m-auto" width="40">
             </div>
             <div class="col-9 col-lg-10 p-1">

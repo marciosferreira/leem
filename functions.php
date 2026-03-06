@@ -283,7 +283,7 @@ function app_upload($arquivo)
         $info = new SplFileInfo($arquivo['name']);
         $ext = strtolower($info->getExtension());
         $nome_arquivo = date("dmYHis") . '.' . $ext; //Definindo um novo nome para o arquivo
-        $baseUploadsDir = __DIR__ . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR;
+        $baseUploadsDir = __DIR__ . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR;
         $dir = $baseUploadsDir;
 
 
@@ -441,7 +441,7 @@ function get_paises($selecionados = '', $resto=false)
             $icone = $icones[$pais];
 
             $html .= '<div class="pais col-12 col-sm-6 col-md-3 mb-4 text-dark d-inline-block font-weight-bold" data-pais="' . $pais . '">';
-            $html .= '<img src="/public/img/paises/' . $icone . '" alt="' . $pais . '">' . $pais;
+            $html .= '<img src="/img/paises/' . $icone . '" alt="' . $pais . '">' . $pais;
             $html .= '</div>';
             
         }

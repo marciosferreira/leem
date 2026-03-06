@@ -17,7 +17,7 @@ $(document).ready(function() {
         urlProtocol: true,
         btns: [
             ['viewHTML'],
-            ['undo', 'redo'],
+            ['undo', 'redo'], // Only supported in Blink browsers
             ['formatting'],
             ['strong', 'em', 'del'],
             ['superscript', 'subscript'],
@@ -90,7 +90,7 @@ function entrada() {
             }
         });
 
-        ajax.fail(function() {
+        ajax.fail(function(data) {
             dialogo('Resposta', 'Ocorreu um erro inesperado.');
         });
 
@@ -150,12 +150,11 @@ function senha() {
             }
         });
 
-        ajax.fail(function() {
+        ajax.fail(function(data) {
             dialogo('Resposta', 'Ocorreu um erro inesperado.');
         });
 
     });
-
 }
 
 function atualiza_perfil() {
@@ -200,6 +199,7 @@ function atualiza_avatar() {
             var tgt = evt.target || window.event.srcElement,
                 files = tgt.files;
 
+            // FileReader support
             if (FileReader && files && files.length) {
                 var fr = new FileReader();
                 fr.onload = function() {
@@ -207,6 +207,9 @@ function atualiza_avatar() {
                     $('#form_avatar').submit();
                 }
                 fr.readAsDataURL(files[0]);
+            } else {
+                // fallback -- perhaps submit the input to an iframe and temporarily store
+                // them on the server until the user's session ends.
             }
         }
     });
@@ -230,7 +233,8 @@ function atualiza_avatar() {
             timeout: 60000
         });
 
-        ajax.done(function() {
+        ajax.done(function(data) {
+            // dialogo('Resposta', data.resposta);
             window.location.reload();
         });
 
@@ -251,6 +255,7 @@ function envia_pesquisa() {
         var autor = $("#autor").val();
         var coautor = $("#coautor").val();
         var titulo = $("#titulo").val();
+        //var anexo   = $('#anexo').prop('files')[0];
         var editor = $("#texto").html();
 
         var form = $('#form_pesquisa')[0];
@@ -260,6 +265,7 @@ function envia_pesquisa() {
         data.append('autor', autor);
         data.append('coautor', coautor);
         data.append('titulo', titulo);
+        //data.append('anexo'  , anexo);
         data.append('editor', editor);
 
         var ajax = $.ajax({
@@ -356,6 +362,7 @@ function apaga_pesquisa() {
     });
 }
 
+//Exibe dialogos ao UI
 function dialogo(titulo, texto) {
 
     var dialogo_dom = $('#dialogo');
@@ -371,6 +378,8 @@ function dialogo(titulo, texto) {
 
 function progresso() {
     carregando.show();
+    //    dialogo('Aguarde', 'Carregando...');
+    //    $('#dialogoAcoes').hide();
 }
 
 function reporta_bug() {

@@ -22,7 +22,7 @@
                     <div class="rounded mb-3 p-3">
                         <h1 class="pl-3 lead font-weight-bold m-0 p-0 d-inline-block">
                             <a class="navbar-brand" href="/">
-                                <img src="/public/img/logo-leem.png" width="120" class="rounded-circle bg-green p-3" alt="LEEM">
+                                <img src="/img/logo-leem.png" width="120" class="rounded-circle bg-green p-3" alt="LEEM">
                             </a>
                             <span class="d-none">LEEM</span>
                         </h1>
@@ -37,7 +37,7 @@
                     <iframe class="embed-responsive-item" src="https://maps.google.com.br/maps?q=INPA,MANAUS&amp;output=embed"></iframe>
                 </div>
                 <!-- <div class="border-dashed mt-1 mb-1 p-1 bg-white rounded">
-                    <a href="https://www.google.com.br/maps/dir//endere%C3%A7o+do+inpa/@-3.0948812,-59.9878055,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x926c0534ffbf3c99:0x1a7fea8b77c41cf1!2m2!1d-59.9892519!2d-3.0945611" target="_blank"><img src="/public/img/mapa-leem.jpg" class="img-fluid"></a>
+                    <a href="https://www.google.com.br/maps/dir//endere%C3%A7o+do+inpa/@-3.0948812,-59.9878055,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x926c0534ffbf3c99:0x1a7fea8b77c41cf1!2m2!1d-59.9892519!2d-3.0945611" target="_blank"><img src="/img/mapa-leem.jpg" class="img-fluid"></a>
                 </div> -->
             </div>
 
@@ -56,7 +56,7 @@
                             ?>
 
                             <div class="d-inline-block text-center">
-                                <img src="/public/uploads/fotos/<?php echo $apoiador['foto']; ?>" alt="<?php echo $apoiador['titulo']; ?>" width="200" height="200" class="m-auto">
+                                <img src="/uploads/fotos/<?php echo $apoiador['foto']; ?>" alt="<?php echo $apoiador['titulo']; ?>" width="200" height="200" class="m-auto">
                             </div>
 
                         <?php

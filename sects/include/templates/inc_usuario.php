@@ -6,9 +6,9 @@ foreach ($equipe as $usuario) :
 
     <div class="col-12 col-md-6 col-lg-4 text-center mb-4">
         <div class="p-3 bg-white h-100">
-            <img src="/public/uploads/fotos/<?php echo $avatar; ?>" width="120" height="120" class="mb-3 rounded-circle" alt="<?php echo $usuario['nome']; ?>">
+            <img src="/uploads/fotos/<?php echo $avatar; ?>" width="120" height="120" class="mb-3 rounded-circle" alt="<?php echo $usuario['nome']; ?>">
             <h3 class="lead pb-2 font-weight-bold" style="font-size:1em!important">
-                <a href="/equipe/<?php echo $usuario['slug']; ?>/" class="btn btn-sm bg-white font-weight-bold text-dark">
+                <a href="/index.php/equipe/<?php echo $usuario['slug']; ?>/" class="btn btn-sm bg-white font-weight-bold text-dark">
                     <?php
                     echo substr($usuario['nome'], 0, 30);
                     if (strlen($usuario['nome']) > 30) {

@@ -77,7 +77,7 @@ function delete_apoiador($id_apoiador){
     $apoiador = $apoiador->fetch_assoc();
     $foto = $apoiador['foto'];
 
-    $fotoPath = dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . 'fotos' . DIRECTORY_SEPARATOR . $foto;
+    $fotoPath = dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . 'fotos' . DIRECTORY_SEPARATOR . $foto;
     if (file_exists($fotoPath)) {
         @unlink($fotoPath);
     }
