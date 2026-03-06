@@ -23,6 +23,9 @@ $erro_code = (!empty($_REQUEST['erro_code'])) ? $_REQUEST['erro_code'] : '';
                     case '404':
                         echo 'A página não foi encontrada.';
                         break;
+                    case '500':
+                        echo 'Falha ao conectar no banco de dados.';
+                        break;
                     default:
                         echo 'Ocorreu um erro desconhecido.';
                         break;

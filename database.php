@@ -10,6 +10,10 @@ class database{
     private $conexao;
 
     public function __construct(){
+        if (function_exists('mysqli_report')) {
+            mysqli_report(MYSQLI_REPORT_OFF);
+        }
+
         $this->db_host = getenv('LEEM_DB_HOST') ?: 'leem_db';
         $this->db_user = getenv('LEEM_DB_USER') ?: 'leemdxxp_leem';
         $this->db_pass = getenv('LEEM_DB_PASS') ?: '';

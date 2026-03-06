@@ -16,6 +16,20 @@ function conexao()
 {
     $app_db = new database();
     $conexao = $app_db->get_conexao();
+    if ($conexao instanceof mysqli && $conexao->connect_errno) {
+        $accept = isset($_SERVER['HTTP_ACCEPT']) ? (string) $_SERVER['HTTP_ACCEPT'] : '';
+        $isAjax = (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower((string) $_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest')
+            || stripos($accept, 'application/json') !== false;
+
+        if ($isAjax) {
+            retorna_json(false, 'Falha ao conectar no banco de dados.');
+        }
+
+        http_response_code(500);
+        $_REQUEST['erro_code'] = '500';
+        require_once __DIR__ . DIRECTORY_SEPARATOR . 'sects' . DIRECTORY_SEPARATOR . 'sec_erro.php';
+        exit;
+    }
     return $conexao;
 }
 
