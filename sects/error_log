@@ -1,0 +1,29 @@
+[02-Jan-2026 10:30:28 America/Sao_Paulo] PHP Warning:  mysqli::__construct(): (08004/1040): Too many connections in /home/leemdxxp/public_html/app/database.php on line 16
+[02-Jan-2026 10:30:28 America/Sao_Paulo] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/leemdxxp/public_html/app/sects/cruds/crud_avatar.php on line 41
+[02-Jan-2026 10:30:28 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on null in /home/leemdxxp/public_html/app/sects/cruds/crud_avatar.php:42
+Stack trace:
+#0 /home/leemdxxp/public_html/app/sects/include/templates/inc_usuario.php(4): read_avatar(30)
+#1 /home/leemdxxp/public_html/app/sects/sec_projetos.php(84): include_once('/home/leemdxxp/...')
+#2 {main}
+  thrown in /home/leemdxxp/public_html/app/sects/cruds/crud_avatar.php on line 42
+[19-Jan-2026 21:35:28 America/Sao_Paulo] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/leemdxxp/public_html/app/database.php on line 16
+[19-Jan-2026 21:35:28 America/Sao_Paulo] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/leemdxxp/public_html/app/sects/cruds/crud_usuario.php on line 180
+[19-Jan-2026 21:35:28 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on null in /home/leemdxxp/public_html/app/sects/cruds/crud_usuario.php:181
+Stack trace:
+#0 /home/leemdxxp/public_html/app/sects/sec_usuario.php(7): read_usuario(Array)
+#1 {main}
+  thrown in /home/leemdxxp/public_html/app/sects/cruds/crud_usuario.php on line 181
+[27-Jan-2026 22:17:37 America/Sao_Paulo] PHP Warning:  mysqli::__construct(): (08004/1040): Too many connections in /home/leemdxxp/public_html/app/database.php on line 16
+[27-Jan-2026 22:17:37 America/Sao_Paulo] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/leemdxxp/public_html/app/sects/cruds/crud_usuario.php on line 180
+[27-Jan-2026 22:17:37 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on null in /home/leemdxxp/public_html/app/sects/cruds/crud_usuario.php:181
+Stack trace:
+#0 /home/leemdxxp/public_html/app/sects/sec_usuario.php(7): read_usuario(Array)
+#1 {main}
+  thrown in /home/leemdxxp/public_html/app/sects/cruds/crud_usuario.php on line 181
+[27-Jan-2026 22:17:37 America/Sao_Paulo] PHP Warning:  mysqli::__construct(): (08004/1040): Too many connections in /home/leemdxxp/public_html/app/database.php on line 16
+[27-Jan-2026 22:17:37 America/Sao_Paulo] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/leemdxxp/public_html/app/sects/cruds/crud_usuario.php on line 180
+[27-Jan-2026 22:17:37 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on null in /home/leemdxxp/public_html/app/sects/cruds/crud_usuario.php:181
+Stack trace:
+#0 /home/leemdxxp/public_html/app/sects/sec_usuario.php(7): read_usuario(Array)
+#1 {main}
+  thrown in /home/leemdxxp/public_html/app/sects/cruds/crud_usuario.php on line 181
