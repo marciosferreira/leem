@@ -81,6 +81,7 @@ function delete_apoiador($id_apoiador){
     if (file_exists($fotoPath)) {
         @unlink($fotoPath);
     }
+    
 
     $sql = "DELETE FROM leem_foto WHERE id = ?";
     $comando = $conexao->prepare($sql);
