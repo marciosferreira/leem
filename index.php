@@ -1,10 +1,24 @@
 <?php
+if (!function_exists('leem_starts_with')) {
+    function leem_starts_with($haystack, $needle)
+    {
+        if (!is_string($haystack) || !is_string($needle)) {
+            return false;
+        }
+        $len = strlen($needle);
+        if ($len === 0) {
+            return true;
+        }
+        return substr($haystack, 0, $len) === $needle;
+    }
+}
+
 if (isset($_SERVER['REQUEST_URI'])) {
     $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     if (is_string($path)) {
         $staticPrefixes = ['/public/', '/css/', '/js/', '/img/', '/libs/', '/uploads/'];
         foreach ($staticPrefixes as $prefix) {
-            if (!str_starts_with($path, $prefix)) {
+            if (!leem_starts_with($path, $prefix)) {
                 continue;
             }
 
@@ -19,17 +33,24 @@ if (isset($_SERVER['REQUEST_URI'])) {
                     continue;
                 }
                 $ext = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
-                $contentType = match ($ext) {
-                    'css' => 'text/css; charset=utf-8',
-                    'js' => 'application/javascript; charset=utf-8',
-                    'png' => 'image/png',
-                    'jpg', 'jpeg' => 'image/jpeg',
-                    'gif' => 'image/gif',
-                    'svg' => 'image/svg+xml',
-                    'ico' => 'image/x-icon',
-                    'webp' => 'image/webp',
-                    default => 'application/octet-stream',
-                };
+                $contentType = 'application/octet-stream';
+                if ($ext === 'css') {
+                    $contentType = 'text/css; charset=utf-8';
+                } elseif ($ext === 'js') {
+                    $contentType = 'application/javascript; charset=utf-8';
+                } elseif ($ext === 'png') {
+                    $contentType = 'image/png';
+                } elseif ($ext === 'jpg' || $ext === 'jpeg') {
+                    $contentType = 'image/jpeg';
+                } elseif ($ext === 'gif') {
+                    $contentType = 'image/gif';
+                } elseif ($ext === 'svg') {
+                    $contentType = 'image/svg+xml';
+                } elseif ($ext === 'ico') {
+                    $contentType = 'image/x-icon';
+                } elseif ($ext === 'webp') {
+                    $contentType = 'image/webp';
+                }
                 header('Content-Type: ' . $contentType);
                 readfile($filePath);
                 exit;
@@ -42,12 +63,78 @@ if (isset($_SERVER['REQUEST_URI'])) {
 }
 
 $rawPath = is_string($path) ? $path : '/';
-$segments = array_values(array_filter(explode('/', trim($rawPath, '/')), static fn($s) => $s !== ''));
+$segments = array_values(array_filter(explode('/', trim($rawPath, '/')), static function ($s) {
+    return $s !== '';
+}));
 if (isset($segments[0]) && $segments[0] === 'index.php') {
     array_shift($segments);
 }
 
 $route = $segments[0] ?? '';
+
+if ($route === '__health') {
+    header('Content-Type: application/json; charset=utf-8');
+
+    $dbStatus = null;
+    $dbError = null;
+
+    $mysqliAvailable = extension_loaded('mysqli');
+    if ($mysqliAvailable && is_file(__DIR__ . DIRECTORY_SEPARATOR . 'database.php')) {
+        require_once __DIR__ . DIRECTORY_SEPARATOR . 'database.php';
+        if (class_exists('database')) {
+            $db = new database();
+            $conn = $db->get_conexao();
+            if ($conn instanceof mysqli) {
+                if ($conn->connect_errno) {
+                    $dbStatus = 'error';
+                    $dbError = $conn->connect_errno . ': ' . $conn->connect_error;
+                } else {
+                    $dbStatus = 'ok';
+                }
+                @$conn->close();
+            } else {
+                $dbStatus = 'error';
+                $dbError = 'No mysqli connection';
+            }
+        } else {
+            $dbStatus = 'error';
+            $dbError = 'database class not found';
+        }
+    } elseif (!$mysqliAvailable) {
+        $dbStatus = 'error';
+        $dbError = 'mysqli extension not loaded';
+    } else {
+        $dbStatus = 'error';
+        $dbError = 'database.php not found';
+    }
+
+    echo json_encode([
+        'ok' => true,
+        'php' => PHP_VERSION,
+        'sapi' => php_sapi_name(),
+        'request' => [
+            'host' => $_SERVER['HTTP_HOST'] ?? null,
+            'uri' => $_SERVER['REQUEST_URI'] ?? null,
+            'https' => $_SERVER['HTTPS'] ?? null,
+            'server_port' => $_SERVER['SERVER_PORT'] ?? null,
+            'x_forwarded_proto' => $_SERVER['HTTP_X_FORWARDED_PROTO'] ?? null,
+            'x_forwarded_scheme' => $_SERVER['HTTP_X_FORWARDED_SCHEME'] ?? null,
+            'request_scheme' => $_SERVER['REQUEST_SCHEME'] ?? null,
+        ],
+        'db' => [
+            'status' => $dbStatus,
+            'error' => $dbError,
+            'env' => [
+                'host' => getenv('LEEM_DB_HOST') ?: null,
+                'port' => getenv('LEEM_DB_PORT') ?: null,
+                'name' => getenv('LEEM_DB_NAME') ?: null,
+                'user' => getenv('LEEM_DB_USER') ?: null,
+                'pass_set' => getenv('LEEM_DB_PASS') !== false && getenv('LEEM_DB_PASS') !== '',
+            ],
+        ],
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+    exit;
+}
 
 if ($route === 'rotas') {
     $_REQUEST['rota'] = $segments[1] ?? ($_REQUEST['rota'] ?? '');

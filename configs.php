@@ -25,6 +25,14 @@ if (isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] === 'on' || $_SERVER['HTTPS']
     $isHttps = true;
     $_SERVER['HTTPS'] = 'on';
     $_SERVER['SERVER_PORT'] = '443';
+} elseif (isset($_SERVER['HTTP_X_FORWARDED_SCHEME']) && strtolower((string) $_SERVER['HTTP_X_FORWARDED_SCHEME']) === 'https') {
+    $isHttps = true;
+    $_SERVER['HTTPS'] = 'on';
+    $_SERVER['SERVER_PORT'] = '443';
+} elseif (isset($_SERVER['REQUEST_SCHEME']) && strtolower((string) $_SERVER['REQUEST_SCHEME']) === 'https') {
+    $isHttps = true;
+    $_SERVER['HTTPS'] = 'on';
+    $_SERVER['SERVER_PORT'] = '443';
 } elseif (isset($_SERVER['HTTP_X_FORWARDED_SSL']) && strtolower((string) $_SERVER['HTTP_X_FORWARDED_SSL']) === 'on') {
     $isHttps = true;
     $_SERVER['HTTPS'] = 'on';
