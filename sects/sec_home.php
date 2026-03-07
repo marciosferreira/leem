@@ -347,5 +347,4 @@ $pag =
         $(".destaques").slick();
     </script>';
 
-include_once('app/configs.php');
 include_once("include/inc_rodape.php"); ?>

@@ -26,6 +26,10 @@ class database{
             $this->db_pass, 
             $this->db_base,
             $this->db_port);
+
+        if ($this->conexao instanceof mysqli && !$this->conexao->connect_errno) {
+            @$this->conexao->set_charset('utf8mb4');
+        }
     }
 
     public function get_conexao(){

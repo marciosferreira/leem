@@ -13,6 +13,17 @@ set_include_path(implode(PATH_SEPARATOR, array_filter([
 require_once __DIR__ . DIRECTORY_SEPARATOR . 'functions.php';
 date_default_timezone_set('America/Sao_Paulo');
 
+if (function_exists('ini_set')) {
+    ini_set('default_charset', 'UTF-8');
+}
+
+if (!headers_sent()) {
+    $accept = isset($_SERVER['HTTP_ACCEPT']) ? (string) $_SERVER['HTTP_ACCEPT'] : '';
+    if ($accept === '' || stripos($accept, 'text/html') !== false || stripos($accept, '*/*') !== false) {
+        header('Content-Type: text/html; charset=utf-8');
+    }
+}
+
 $disableHttpsRedirect = strtolower((string) getenv('LEEM_DISABLE_HTTPS_REDIRECT')) === '1'
     || strtolower((string) getenv('LEEM_DISABLE_HTTPS_REDIRECT')) === 'true';
 
