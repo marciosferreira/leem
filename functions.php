@@ -242,7 +242,7 @@ function html_ativo($dados)
     $html .= 'Olá, <span style="font-weight:bold">' . $dados['nome'] . '</span>';
     $html .= '!<br> Sua conta foi aprovada. <br>';
     $html .= 'Clique no link abaixo para acessa-la. <br>';
-    $html .= '<a href="http://leem.net.br/entrada/';
+    $html .= '<a href="https://leem.net.br/entrada/';
     $html .= '" style="color:#ffffff;font-size: 24px;text-decoration:none;display:block;border:1px solid #fff;padding:10px;text-align:center;">Acesse sua conta</a>';
     $html .= '</div>';
 

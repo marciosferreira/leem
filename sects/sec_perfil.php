@@ -55,7 +55,7 @@ include_once('include/inc_header.php');
                                     <div class="form-group">
                                         <div class="border">
                                             <label for="nome" class="h5 border-bottom pt-3 pb-3 mb-3 d-block">Fale um pouco sobre você</label>
-                                            <textarea rows="6" class="form-control border-0" name="biografia" id="biografia" maxlength="1000" value="<?php echo $usuario['lattes']; ?>"><?php echo $usuario['biografia']; ?></textarea>
+                                            <textarea rows="6" class="form-control border-0" name="biografia" id="biografia" maxlength="1000" value="<?php echo $usuario['lattes']; ?>"><?php echo str_replace('http://', 'https://', $usuario['biografia']); ?></textarea>
                                             <small>Máx.: 1000</small>
                                         </div>
                                     </div>

@@ -20,7 +20,7 @@ foreach ($equipe as $usuario) :
             <p style="height: 100px" class="small p-3 border rounded m-0">
                 <?php
                 if (!empty($usuario['biografia'])) {
-                    echo substr($usuario['biografia'], 0, 120) . '...';
+                    echo substr(strip_tags($usuario['biografia']), 0, 120) . '...';
                 } else {
                     echo 'Este usuário ainda não adicionou sua biografia.';
                 }

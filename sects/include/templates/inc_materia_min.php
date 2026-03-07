@@ -50,7 +50,7 @@ function materia($materias){
                             <p class="text-dark">
                                 <?php 
                                 //echo substr($materia['descricao'], 0, 250); 
-                                $arrayWords = explode(' ', $materia['descricao']);
+                                $arrayWords = explode(' ', strip_tags($materia['descricao']));
                                 $count = 0;
                                 foreach($arrayWords as $word){
 

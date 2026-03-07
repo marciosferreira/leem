@@ -96,7 +96,7 @@ if (!empty($_REQUEST['slug'])) :
                                             ?>
 
                                 <p class="text-dark m-0 text-left">
-                                    <?php echo $equipe_usuario['biografia']; ?>
+                                    <?php echo str_replace('http://', 'https://', $equipe_usuario['biografia']); ?>
                                 </p>
 
                                 <?php
