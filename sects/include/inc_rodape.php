@@ -49,14 +49,18 @@
                     <div class="w-100 border-dashed mt-5 mb-5"></div>
                     <!--  Mapa clicável  -->
                     <h2 class="h5 mb-3 mt-1 text-white">Apoiadores</h2>
-                    <div class="apoiadores bg-white rounded p-3">
+                    <div class="apoiadores px-4">
 
                         <?php
                         foreach ($apoiadores as $apoiador) :
                             ?>
 
-                            <div class="d-inline-block text-center">
-                                <img src="/uploads/fotos/<?php echo $apoiador['foto']; ?>" alt="<?php echo $apoiador['titulo']; ?>" width="200" height="200" class="m-auto">
+                            <div class="px-2"> <!-- Spacer for slick -->
+                                <div class="apoiador-card">
+                                    <img src="/uploads/fotos/<?php echo $apoiador['foto']; ?>" 
+                                         alt="<?php echo $apoiador['titulo']; ?>" 
+                                         class="d-block mx-auto">
+                                </div>
                             </div>
 
                         <?php
@@ -73,10 +77,7 @@
         </div>
         <div class="w-100 border-dashed mt-5 mb-5"></div>
 
-        <p class="small text-right text-center">
-            Feito com <span class="text-danger"><i class="material-icons align-middle"> favorite </i></span> por
-            <a href="mailto:danilsonvs04@gmail.com" class="bg-white small rounded text-dark pl-1 pr-1 font-weight-bold">Danilson Veloso</a>
-        </p>
+
 
         <script>
             var data = new Date();

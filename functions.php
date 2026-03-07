@@ -14,6 +14,12 @@ require_once __DIR__ . DIRECTORY_SEPARATOR . "database.php";
 //Conexão do banco de dados
 function conexao()
 {
+    static $conexao_global = null;
+
+    if ($conexao_global !== null) {
+        return $conexao_global;
+    }
+
     $app_db = new database();
     $conexao = $app_db->get_conexao();
     if ($conexao instanceof mysqli && $conexao->connect_errno) {
@@ -30,6 +36,8 @@ function conexao()
         require_once __DIR__ . DIRECTORY_SEPARATOR . 'sects' . DIRECTORY_SEPARATOR . 'sec_erro.php';
         exit;
     }
+
+    $conexao_global = $conexao;
     return $conexao;
 }
 

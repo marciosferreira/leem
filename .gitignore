@@ -1,2 +1,12 @@
 source_folder/
 public/uploads/
+uploads/
+env_local.sh
+
+# Arquivos de ambiente local e testes
+start_server.sh
+start_server.bat
+test_connection.sh
+test_connection.bat
+router.php
+tools/test_db.php

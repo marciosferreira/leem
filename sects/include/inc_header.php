@@ -87,7 +87,7 @@ endif;
                         ?>
 
                     <li class="nav-item p-2">
-                        <a class="nav-link text-white bg-dark rounded" href="/cadastro/"><i class="material-icons align-middle">person_add</i> Cadastro</a>
+                        <a class="nav-link text-dark bg-white rounded" href="/cadastro/"><i class="material-icons align-middle">person_add</i> Cadastro</a>
                     </li>
 
                     <li class="nav-item p-2">
