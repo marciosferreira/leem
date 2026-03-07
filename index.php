@@ -204,6 +204,7 @@ switch ($route) {
         require_once __DIR__ . DIRECTORY_SEPARATOR . 'sects' . DIRECTORY_SEPARATOR . 'sec_bug.php';
         break;
     case 'historia':
+    case 'nossa-historia':
         require_once __DIR__ . DIRECTORY_SEPARATOR . 'sects' . DIRECTORY_SEPARATOR . 'sec_historia.php';
         break;
     case 'admin':
