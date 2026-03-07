@@ -441,6 +441,16 @@ a:hover { color: var(--teal-deeper); }
   letter-spacing: .12em; text-transform: uppercase; color: var(--muted);
 }
 
+/* Default avatar adjustment */
+.card-img-wrap img.default-avatar {
+  object-fit: contain;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
+  opacity: 0.6;
+}
+
 /* Badge de tipo (sobre a imagem) */
 .card-tipo {
   position: absolute; top: .65rem; left: .65rem; z-index: 2;
