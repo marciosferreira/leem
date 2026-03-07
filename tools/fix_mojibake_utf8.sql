@@ -131,6 +131,7 @@ SET
     ELSE nome
   END;
 
+
 UPDATE leem_video
 SET
   titulo = CASE
